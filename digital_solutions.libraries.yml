@@ -1,24 +1,26 @@
 # Main theme library.
 global:
   js:
-    js/digital-solutions.js: {}
+    js/vendor/purecounter/purecounter_vanilla.js: {}
+    js/vendor/aos/aos.js: {}
+    js/vendor/bootstrap/js/bootstrap.bundle.min.js: {}
+    js/vendor/isotope-layout/isotope.pkgd.min.js: {}
+    js/vendor/swiper/swiper-bundle.min.js: {}
+    js/vendor/typed.js/typed.umd.js: {}
+    js/vendor/waypoints/noframework.waypoints.js: {}
+    js/vendor/php-email-form/validate.js: {}
+    js/vendor/glightbox/js/glightbox.min.js: {}
+    js/main.js: {}
   css:
-    base:
-      css/base/elements.css: {}
-    component:
-      css/component/block.css: {}
-      css/component/breadcrumb.css: {}
-      css/component/field.css: {}
-      css/component/form.css: {}
-      css/component/header.css: {}
-      css/component/menu.css: {}
-      css/component/messages.css: {}
-      css/component/node.css: {}
-      css/component/sidebar.css: {}
-      css/component/table.css: {}
-      css/component/tabs.css: {}
-      css/component/buttons.css: {}
-    layout:
-      css/layout/layout.css: {}
     theme:
-      css/theme/print.css: { media: print }
+      css/style.css: {}
+      css/vendor/aos/aos.css: {}
+      css/vendor/bootstrap/css/bootstrap.min.css: {}
+      css/vendor/bootstrap-icons/bootstrap-icons.css: {}
+      css/vendor/boxicons/css/boxicons.min.css: {}
+      css/vendor/glightbox/css/glightbox.min.css: {}
+      css/vendor/swiper/swiper-bundle.min.css: {}
+      css/vendor/remixicon/remixicon.css: {}
+  dependencies:
+    - core/jquery
+    - core/once
