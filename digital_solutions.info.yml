@@ -1,0 +1,14 @@
+name: digital_solutions
+type: theme
+base theme: claro
+description: A flexible theme with a responsive, mobile-first layout.
+package: Custom
+core_version_requirement: ^10
+libraries:
+  - digital_solutions/global
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  hero_banner: 'Hero Banner'
+  content: 'Content'
+  footer: 'Footer'
