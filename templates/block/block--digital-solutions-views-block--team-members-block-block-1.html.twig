@@ -1,28 +1,18 @@
-<!-- {% for row in content['#view'].result %}
-
-  {{ content['#view'].field['field_team_member_name'].value(row) }} 
-  
-{% endfor %} -->
-
-
 <section id="team" class="team">
     <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Team</h2>
-        <p> {{block_title}} </p>
-      </div>
-
-      <div class="row">
-
-        {% for row in content['#view'].result %}
+        <div class="section-title">
+            <h2>Team</h2>
+            <p> {{ block_title }} </p>
+        </div>
+        <div class="row">
+         
+            {% for row in content['#view'].result %}
             {% set image_uri = content['#view'].field['field_team_member_image'].value(row).entity.uri.value %}
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">                  
-                    <img src="{{ image_uri }}" class="img-fluid" alt="">
+                    <img src="{{ base_path ~ directory }}/images/team/team-1.jpg" class="img-fluid" alt="">
                     <div class="social">
-
                         {{ content['#view'].field['field_social_media_links'].value(row) }}
                     <!-- {% for links in content['#view'].field['field_social_media_links'].value(row) %}
                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -37,6 +27,7 @@
             </div>
 
         {% endfor %}
-      </div>
+
+        </div>
     </div>
-  </section>
+</section>

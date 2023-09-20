@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 use Drupal\block\Entity\Block;
 
@@ -11,28 +13,29 @@ use Drupal\block\Entity\Block;
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
-function digital_solutions_preprocess_html(array &$variables): void {
-
+function digital_solutions_preprocess_html(array &$variables): void
+{
 }
 
 /**
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
-function digital_solutions_preprocess_page(array &$variables): void {
-
+function digital_solutions_preprocess_page(array &$variables): void
+{
 }
 
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function digital_solutions_preprocess_node(array &$variables): void {
-
+function digital_solutions_preprocess_node(array &$variables): void
+{
 }
 
 /**
  * Implements hook_preprocess_block() for node.html.twig.
  */
-function digital_solutions_preprocess_block(array &$variables) {
+function digital_solutions_preprocess_block(array &$variables)
+{
     if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
         $variables['block_title'] = 'Meet Our Team';
     }
@@ -42,13 +45,13 @@ function digital_solutions_preprocess_block(array &$variables) {
  * Template Suggestions for team members view
  */
 
- function digital_solutions_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
+function digital_solutions_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook){
     if (isset($variables['elements']['#id'])) {
         if ($block = Block::load($variables["elements"]["#id"])) {
-          $plugin = $block->getPluginId();
-          if($plugin == 'views_block:team_members_block-block_1'){
-            // $suggestions[] = $hook . '__' .'team_members';
-          }
+            $plugin = $block->getPluginId();
+            if ($plugin == 'views_block:team_members_block-block_1') {
+                // $suggestions[] = $hook . '__' .'team_members';
+            }
         }
-      }
+    }
 }
