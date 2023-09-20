@@ -1,2 +1,2 @@
-# digital_solutions
-Digital Solutions D10 theme
+# Digital Solutions D10 theme
+
