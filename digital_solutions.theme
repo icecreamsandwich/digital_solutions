@@ -37,7 +37,7 @@ function digital_solutions_preprocess_node(array &$variables): void
 function digital_solutions_preprocess_block(array &$variables)
 {
     if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
-        $variables['block_title'] = 'Meet Our Team';
+        // $variables['block_title'] = 'Check Our Team';
     }
 }
 
