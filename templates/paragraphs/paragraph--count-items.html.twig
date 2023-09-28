@@ -1,0 +1,9 @@
+{% set box_icon_class = paragraph.field_icon_class.value %}
+
+<div class="col-md-6 d-md-flex align-items-md-stretch">
+    <div class="count-box">
+      <i class="{{ box_icon_class }}"></i>
+      <span data-purecounter-start="0" data-purecounter-end="{{ paragraph.field_counter.value }}" data-purecounter-duration="2" class="purecounter"></span>
+      <p><strong>{{ paragraph.field_count_item_title.value }}</strong> {{ paragraph.field_count_item_description.value }}</p>
+    </div>
+  </div>

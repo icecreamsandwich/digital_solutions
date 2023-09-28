@@ -2,12 +2,12 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row">
-      <!-- <div class="image col-lg-6" style='background-image: url("{{ base_path ~ directory }}/images/features.jpg");' data-aos="fade-right"></div> -->
-      <div>
-      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            {{ content }}
+      <div class="image col-lg-6"  data-aos="fade-right">
+        {{ content.field_feature_image }}
       </div>
-    </div>
-
+      
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            {{ content.field_featured_paragraph }}
+      </div>
   </div>
 </section>
