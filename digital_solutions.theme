@@ -54,3 +54,20 @@ function digital_solutions_theme_suggestions_block_alter(array &$suggestions, ar
         }
     }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function digital_solutions_theme($existing, $type, $theme, $path) {
+    return [
+      'contact_message_contact_us_form' => [
+        'render element' => 'form',
+      ],
+    ];
+  }
+
+
+  function digital_solutions_form_alter(&$form, &$form_state, $form_id) {
+    // kint($form);
+  }
+  

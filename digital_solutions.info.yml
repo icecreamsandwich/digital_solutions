@@ -11,4 +11,5 @@ regions:
   primary_menu: 'Primary menu'
   hero_banner: 'Hero Banner'
   content: 'Content'
+  footer_above: 'Footer Above'
   footer: 'Footer'
