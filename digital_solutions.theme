@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Drupal\block\Entity\Block;
-
+use Drupal\file\Entity\File;
 
 /**
  * @file
@@ -34,10 +34,9 @@ function digital_solutions_preprocess_node(array &$variables): void
 /**
  * Implements hook_preprocess_block() for node.html.twig.
  */
-function digital_solutions_preprocess_block(array &$variables)
-{
+function digital_solutions_preprocess_block(array &$variables){
     if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
-        // $variables['block_title'] = 'Check Our Team';
+        //TODO: Get each fields and get the image url
     }
 }
 
