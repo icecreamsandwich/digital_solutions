@@ -3,10 +3,7 @@
         <div class="member-img">
                 {{ fields.field_team_member_image.content }}
             <div class="social">
-                {% for item in fields.field_social_media_links.content %}
-                    <!-- <a href="{{ item.url }}"><i class="bi bi- {{ item.title }}"></i></a> -->
-                    {{ item }}
-                {% endfor %}
+                {{ fields.field_social_media_links.content }}
             </div>
         </div>
         <div class="member-info">
