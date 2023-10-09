@@ -16,5 +16,8 @@
         "drupal/devel_kint_extras": "^1.1",
         "drupal/twig_tweak": "^3.2",
         "drupal/slick": "^2.10",
-        "drupal/slick_views": "^2.8"
+        "drupal/slick_views": "^2.8",
+        "drupal/contact_block": "^2.0",
+        "drupal/contact_storage": "^1.3",
+        "drupal/simplify_menu": "^3.1"
     }
