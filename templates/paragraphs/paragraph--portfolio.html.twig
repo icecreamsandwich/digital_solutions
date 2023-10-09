@@ -1,0 +1,16 @@
+{% set category = paragraph.field_image_title.value | split(' ')| first | lower %}
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-{{category}}">
+    <div class="portfolio-wrap">
+        {{ content.field_portfolio_image | set_attribute('class', 'img-fluid') }}
+        <div class="portfolio-info">
+            <h4>{{ paragraph.field_image_title.value }}</h4>
+            <p>{{ paragraph.field_portfolio_category.value }}</p>
+            <div class="portfolio-links">
+                <a href="#" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="{{ paragraph.field_image_title.value }}"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
