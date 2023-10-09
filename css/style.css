@@ -122,7 +122,7 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  /* padding: 15px 0; */
 }
 
 #header.header-scrolled,
@@ -142,6 +142,7 @@ h6 {
 
 #header .logo a {
   color: #fff;
+  text-decoration: none;
 }
 
 #header .logo a span {
@@ -164,6 +165,7 @@ h6 {
   font-size: 14px;
   display: inline-block;
   border: 2px solid #ffc451;
+  text-decoration: none;
 }
 
 .get-started-btn:hover {
@@ -1550,8 +1552,4 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
-}
-
-.fixed-top {
-  position:relative !important;
 }

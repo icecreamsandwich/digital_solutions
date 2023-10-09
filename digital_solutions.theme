@@ -34,40 +34,103 @@ function digital_solutions_preprocess_node(array &$variables): void
 /**
  * Implements hook_preprocess_block() for node.html.twig.
  */
-function digital_solutions_preprocess_block(array &$variables){
-    if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
-        //TODO: Get each fields and get the image url
-    }
+function digital_solutions_preprocess_block(array &$variables)
+{
+  if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
+    //TODO: Get each fields and get the image url
+  }
 }
 
 /**
  * Template Suggestions for team members view
  */
 
-function digital_solutions_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook){
-    if (isset($variables['elements']['#id'])) {
-        if ($block = Block::load($variables["elements"]["#id"])) {
-            $plugin = $block->getPluginId();
-            if ($plugin == 'views_block:team_members_block-block_1') {
-                // $suggestions[] = $hook . '__' .'team_members';
-            }
-        }
+function digital_solutions_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook)
+{
+  if (isset($variables['elements']['#id'])) {
+    if ($block = Block::load($variables["elements"]["#id"])) {
+      $plugin = $block->getPluginId();
+      if ($plugin == 'views_block:team_members_block-block_1') {
+        // $suggestions[] = $hook . '__' .'team_members';
+      }
     }
+  }
 }
 
 /**
  * Implements hook_theme().
  */
-function digital_solutions_theme($existing, $type, $theme, $path) {
-    return [
-      'contact_message_contact_us_form' => [
-        'render element' => 'form',
-      ],
-    ];
-  }
+function digital_solutions_theme($existing, $type, $theme, $path)
+{
+  return [
+    'contact_message_contact_us_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
 
 
-  function digital_solutions_form_alter(&$form, &$form_state, $form_id) {
-    // kint($form);
-  }
-  
+function digital_solutions_form_alter(&$form, &$form_state, $form_id)
+{
+  // kint($form);
+}
+
+
+/**
+ * hook_views_pre_render
+ */
+// function digital_solutions_views_pre_render(&$view){
+//   if ($view->id() == 'team_members_block' && $view->current_display == 'block_1') {
+//     foreach ($view->result as $key => $value) {
+//       // do whatever you want with each "row"
+//       // Check if the field exists in the row.
+//       if (isset($value->_entity->field_social_media_links)) {
+//         // Get an array of link values.
+//         $link_values = $value->_entity->field_social_media_links->getValue();
+//         // print_r($link_values);
+//         // Loop through the link values.
+//         foreach ($link_values as $link_value) {
+//           // Get the URL and title of each link.
+//           $url = $link_value['uri'];
+//           $title = $link_value['title'];
+//           // $output = \Drupal\Core\Render\Markup::create('<a href="' . $url . '"><i class="bi bi-"' . $title . '"></a>');
+//           // Add the output to a variable that can be used in your block template.
+//           // $variables['my_link_output'][] = $output;    
+//           $variables['my_link_output'][] = [
+//             'url' => $url,
+//             'title' => $title
+//           ];    
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// function digital_solutions_preprocess_views_view(array &$variables) {
+//   $view = $variables['view'];
+//   if ($view->id() == 'team_members_block' && $view->current_display == 'block_1') {
+//     foreach ($view->result as $key => $value) {
+//       // do whatever you want with each "row"
+//       // Check if the field exists in the row.
+//       if (isset($value->_entity->field_social_media_links)) {
+//         // Get an array of link values.
+//         $link_values = $value->_entity->field_social_media_links->getValue();
+//         // print_r($link_values);
+//         // Loop through the link values.
+//         foreach ($link_values as $link_value) {
+//           // Get the URL and title of each link.
+//           $url = $link_value['uri'];
+//           $title = $link_value['title'];
+//           // $output = \Drupal\Core\Render\Markup::create('<a href="' . $url . '"><i class="bi bi-"' . $title . '"></a>');
+//           // Add the output to a variable that can be used in your block template.
+//           // $variables['my_link_output'][] = $output;    
+//           $variables['my_link_output'][] = [
+//             'url' => $url,
+//             'title' => $title
+//           ];    
+//         }
+//       }
+//     }
+//   }
+// }

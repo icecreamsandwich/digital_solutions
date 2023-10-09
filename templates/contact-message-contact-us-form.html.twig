@@ -19,9 +19,15 @@
         {{ form.field_message }}
       </div>
       
-      <div class="actions">
-        {{ form.actions }}
-      </div>
+      <form {{form.attributes }}>
+        {{ form.form_build_id }}
+        {{ form.form_token }}
+        {{ form.form_id }}
+
+        <div class="actions">
+          {{ form.actions }}
+        </div>
+      </form>
      
     
       <!-- <div class="text-center"><button type="submit">Send Message</button></div> -->
