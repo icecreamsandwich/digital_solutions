@@ -1,0 +1,29 @@
+<section id="testimonials" class="testimonials">
+    <div class="container" data-aos="zoom-in">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                {% for row in rows %}
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_testimonial_image }}']|render|striptags|trim }}"
+                            class="testimonial-img" alt="">
+                        <h3>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_name }}'] }}
+                        </h3>
+                        <h4>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_designation }}']
+                            }}</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_testimonial }}']
+                            }}
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>

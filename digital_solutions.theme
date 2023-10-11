@@ -39,6 +39,8 @@ function digital_solutions_preprocess_block(array &$variables)
   if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
     //TODO: Get each fields and get the image url
   }
+  $block_title = \Drupal\block\Entity\Block::load('digital_solutions_portfolioblock')->label();
+  $variables['portfolio_block_title'] = $block_title;
 }
 
 /**
@@ -74,63 +76,3 @@ function digital_solutions_form_alter(&$form, &$form_state, $form_id)
 {
   // kint($form);
 }
-
-
-/**
- * hook_views_pre_render
- */
-// function digital_solutions_views_pre_render(&$view){
-//   if ($view->id() == 'team_members_block' && $view->current_display == 'block_1') {
-//     foreach ($view->result as $key => $value) {
-//       // do whatever you want with each "row"
-//       // Check if the field exists in the row.
-//       if (isset($value->_entity->field_social_media_links)) {
-//         // Get an array of link values.
-//         $link_values = $value->_entity->field_social_media_links->getValue();
-//         // print_r($link_values);
-//         // Loop through the link values.
-//         foreach ($link_values as $link_value) {
-//           // Get the URL and title of each link.
-//           $url = $link_value['uri'];
-//           $title = $link_value['title'];
-//           // $output = \Drupal\Core\Render\Markup::create('<a href="' . $url . '"><i class="bi bi-"' . $title . '"></a>');
-//           // Add the output to a variable that can be used in your block template.
-//           // $variables['my_link_output'][] = $output;    
-//           $variables['my_link_output'][] = [
-//             'url' => $url,
-//             'title' => $title
-//           ];    
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-// function digital_solutions_preprocess_views_view(array &$variables) {
-//   $view = $variables['view'];
-//   if ($view->id() == 'team_members_block' && $view->current_display == 'block_1') {
-//     foreach ($view->result as $key => $value) {
-//       // do whatever you want with each "row"
-//       // Check if the field exists in the row.
-//       if (isset($value->_entity->field_social_media_links)) {
-//         // Get an array of link values.
-//         $link_values = $value->_entity->field_social_media_links->getValue();
-//         // print_r($link_values);
-//         // Loop through the link values.
-//         foreach ($link_values as $link_value) {
-//           // Get the URL and title of each link.
-//           $url = $link_value['uri'];
-//           $title = $link_value['title'];
-//           // $output = \Drupal\Core\Render\Markup::create('<a href="' . $url . '"><i class="bi bi-"' . $title . '"></a>');
-//           // Add the output to a variable that can be used in your block template.
-//           // $variables['my_link_output'][] = $output;    
-//           $variables['my_link_output'][] = [
-//             'url' => $url,
-//             'title' => $title
-//           ];    
-//         }
-//       }
-//     }
-//   }
-// }
