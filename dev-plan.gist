@@ -1,8 +1,7 @@
 1.  Create git repo -done
 2.  Generate New theme : digital_solutions - done
-2 a). Divide all regions needed
-2 b). Divide header and footer sections and place html there in region templates - commented header for now.
-   having a relation with item 4.
+   a). Divide all regions needed
+   b). Divide header and footer sections and place html there in region templates - commented header for now. having a relation with item 4.
 3.  Configure Hero Banner - block -done
 5.  About section - block -done
 11. Team section - CT (team members) + view block - image not displaying properly bug
