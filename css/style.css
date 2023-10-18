@@ -474,6 +474,7 @@ h6 {
 #hero .icon-box h3 a {
   color: #fff;
   transition: ease-in-out 0.3s;
+  text-decoration: none;
 }
 
 #hero .icon-box h3 a:hover {
@@ -690,6 +691,7 @@ section {
 .services .icon-box h4 a {
   color: #151515;
   transition: ease-in-out 0.3s;
+  text-decoration: none;
 }
 
 .services .icon-box h4 a:hover {

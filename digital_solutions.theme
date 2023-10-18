@@ -37,10 +37,13 @@ function digital_solutions_preprocess_node(array &$variables): void
 function digital_solutions_preprocess_block(array &$variables)
 {
   if ($variables['elements']['#id'] === 'digital_solutions_views_block__team_members_block_block_1') {
-    //TODO: Get each fields and get the image url
+    $block_title = Block::load('digital_solutions_portfolioblock')->label();
+    $variables['portfolio_block_title'] = $block_title;
+  }elseif($variables['elements']['#id'] === 'digital_solutions_services'){
+    $block_title = Block::load('digital_solutions_services')->label();
+    $variables['service_block_title'] = $block_title;
   }
-  $block_title = \Drupal\block\Entity\Block::load('digital_solutions_portfolioblock')->label();
-  $variables['portfolio_block_title'] = $block_title;
+  
 }
 
 /**
