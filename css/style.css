@@ -588,7 +588,18 @@ section {
   padding-top: 20px;
 }
 
-.clients .swiper-slide img {
+.swiper-slide-client img {
+  opacity: 0.5;
+  transition: 0.3s;
+  filter: grayscale(100);
+}
+
+.swiper-slide-client img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
   filter: grayscale(100);
@@ -597,7 +608,7 @@ section {
 .clients .swiper-slide img:hover {
   filter: none;
   opacity: 1;
-}
+} */
 
 .clients .swiper-pagination {
   margin-top: 20px;
