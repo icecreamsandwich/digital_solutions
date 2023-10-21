@@ -1,0 +1,34 @@
+1.  Create git repo -done
+2.  Generate New theme : digital_solutions - done
+   a). Divide all regions needed
+   b). Divide header and footer sections and place html there in region templates - commented header for now. having a relation with item 4.
+3.  Configure Hero Banner - block -done
+5.  About section - block -done
+11. Team section - CT (team members) + view block - image not displaying properly bug
+7. Feature section  - Static block (features block)
+		Image  + Paragraph (fields: icon class, h4 title , content)
+8. Count block : Image + Count title , Count description + Count items (Paragraph: fields: icon class, counter, title , content) - done
+6. Slick carousel block - view block with all images scrolling horizontally
+		modules needed : slick , slick_views
+    Will be placed between About and featured sections.
+13. Footer links - footer region - done
+9.   Call to action (CTA) block - Static block : CTA  title, CTA content, CTA button (Button text field)
+12. Contact us - contact form - with maps and fields
+		iframe block to show map  : static block
+		Client:  Location , email, call (number) :  static block
+		Fields:	Name, email, subject, message  
+	contact block:	composer require 'drupal/contact_block:^2.0' 
+	Replaced with form tempalteing in Drupal using {{form.fields}} 
+
+4.  Configure main navigation - menu + block styling - header region
+		Create a new menu region : primary_menu
+		Create all navigation menu items
+		use simplify_menu to configure the template: 
+		composer require 'drupal/simplify_menu:^3.1'
+
+10. Portfolio block - Custom portfolio Block Type + Paragraph (fields: Image , taxonomy reference(category))
+			As there is a suitable library found for isotope in drupal we will go with the approach above
+14. Testimonials section : Custom Block + Swiper slider (https://www.drupal.org/project/swiper_slider)
+			No proper styled swiper module available, the above module have no much options
+		fields - image, name, designation, testimonial - done
+16. Services block :  Services block Block - Paragaphs with fields (Icon , title , description) - done
