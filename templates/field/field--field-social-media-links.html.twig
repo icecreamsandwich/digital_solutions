@@ -1,0 +1,6 @@
+<div class="social">
+    {% for item in items %}
+        <a href="{{ item.content['#url'] }}"><i class="bi bi-{{ item.content['#title'] }}"></i></a>
+    {% endfor %}
+</div>
+
