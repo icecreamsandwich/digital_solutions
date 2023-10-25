@@ -1,5 +1,5 @@
 # Digital Solutions D10 theme
-
+A bare Drupal 10 theme for R&D purpose
 
 # Required composer packages
     "require": {
