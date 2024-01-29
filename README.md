@@ -1,5 +1,5 @@
 # Digital Solutions D10 theme
-A bare Drupal 10 theme for R&D purpose
+A bare Drupal 10 theme for a portfolio site for R&D purpose which is deployed to pantheon: https://dev-mmukhtard10.pantheonsite.io
 
 # Required composer packages
     "require": {
